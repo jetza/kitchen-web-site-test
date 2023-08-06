@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to my Kitchen</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: beige;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        .search-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .search-container input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+        }
+        .search-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background: #ddd;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center">Welcome to my Kitchen</h1>
+    <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Find a Recipe" name="search">
+          <button type="submit">🔍</i></button>
+        </form>
+    </div>
+    <h2 class="center">"People who love to eat are always the best people." - Julia Child</h2>
+    <img class="center" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Spaghetti Carbonara" width="500" height="333">
+    <h3 class="center">Contact me</h3>
+    <form class="center" action="mailto:jelena-miodragovic@live.com" method="post" enctype="text/plain">
+        Name:<br>
+        <input type="text" name="name"><br>
+        Surname:<br>
+        <input type="text" name="surname"><br><br>
+        Email:<br>
+        <input type="text" name="email"><br><br>
+        <input type="submit" value="Submit">
+    </form> 
+    <p class="center">KulenDayZ 2023</p>
+</body>
+</html>
+
+
