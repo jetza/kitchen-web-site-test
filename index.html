@@ -1,92 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my Kitchen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            font-family: sans-serif;
             background-color: beige;
-        }
-        .center {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
+            font-family: sans-serif;
             text-align: center;
         }
-        .search-container {
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .search-form {
+            margin: 20px 0;
+        }
+        .search-form input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .search-form button {
+            padding: 10px;
+            border: none;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+        .quote {
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+        .dish-image {
+            width: 50%;
+            margin: 20px auto;
+        }
+        .contact-form {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
         }
-        .search-container input[type=text] {
-            padding: 6px;
-            margin-top: 8px;
-            font-size: 17px;
-            border: none;
+        .contact-form input, .contact-form textarea {
+            width: 50%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
         }
-        .search-container button {
-            float: right;
-            padding: 6px 10px;
-            margin-top: 8px;
-            margin-right: 16px;
-            background: #ddd;
-            font-size: 17px;
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
             border: none;
             cursor: pointer;
         }
-        .search-container button:hover {
-            background: #ccc;
+        h1 {
+            color: #d9534f;
+        }
+        h2 {
+            color: #5bc0de;
+            border-bottom: 2px solid #5bc0de;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #d9534f;
+        }
+        h2 {
+            color: #5bc0de;
+            border-bottom: 2px solid #5bc0de;
+            padding-bottom: 5px;
+        }
+        p {
+            margin-bottom: 20px;
         }
     </style>
 </head>
 <body>
-    <h1 class="center">Welcome to my Kitchen</h1>
-    <div class="search-container">
-        <form action="/action_page.php">
-          <input type="text" placeholder="Find a Recipe" name="search">
-          <button type="submit">🔍</i></button>
-        </form>
+    <div class="container">
+        <h1>Welcome to my Kitchen</h1>
+        <div class="search-form">
+            <input type="text" placeholder="Find a Recipe">
+            <button><i class="fa fa-search"></i></button>
+        </div>
+        <div class="quote">
+            “People who love to eat are always the best people.” - Julia Child
+        </div>
+        <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg" alt="Dish Image" class="dish-image">
+        <div class="contact-form">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Surname">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button onclick="sendEmail()">Submit</button>
+        </div>
+        <div>
+            <h1>The Fascinating World of Pizza</h1>
+        <p>Pizza, a beloved dish enjoyed by millions around the globe, has a rich history and cultural significance that extends far beyond its Italian origins. Its journey from a simple flatbread to a worldwide culinary phenomenon is filled with interesting facts and milestones.</p>
+    
+        <h2>Historical Origins</h2>
+        <p>The history of pizza dates back to ancient civilizations. The Greeks, Egyptians, and Romans all had their versions of flatbreads topped with various ingredients. However, the modern pizza we know today began in Naples, Italy, during the 18th century. The people of Naples, known as Neapolitans, created a dish called "pizza" that featured a flatbread topped with tomatoes, cheese, oil, and other ingredients.</p>
+    
+        <h2>Margherita Pizza</h2>
+        <p>One of the most famous types of pizza is the Margherita. Named after Queen Margherita of Savoy, it was created in 1889 by Neapolitan pizzaiolo Raffaele Esposito. The pizza's toppings—tomatoes, mozzarella cheese, and basil—were chosen to represent the colors of the Italian flag (red, white, and green). This iconic pizza remains a favorite among pizza lovers to this day.</p>
+    
+        <h2>Global Popularity</h2>
+        <p>Pizza's popularity spread rapidly beyond Italy. Italian immigrants introduced pizza to the United States in the late 19th and early 20th centuries. The first pizzeria in the U.S., Lombardi's, opened in New York City in 1905. Since then, pizza has become an integral part of American cuisine, with regional variations such as New York-style, Chicago deep-dish, and California-style pizzas.</p>
+    
+        <h2>Pizza by the Numbers</h2>
+        <p>The statistics surrounding pizza consumption are staggering. In the United States alone, around 3 billion pizzas are sold each year, with an average of 350 slices consumed per second. Pepperoni is the most popular pizza topping, chosen by 36% of pizza lovers. Globally, the pizza industry generates over $145 billion in revenue annually.</p>
+    
+        <h2>Health and Nutrition</h2>
+        <p>While pizza is often viewed as a comfort food, it can also be a nutritious meal when prepared with the right ingredients. A typical slice of Margherita pizza, for example, provides a balance of carbohydrates, protein, and fats. By choosing whole-grain crusts, lean proteins, and plenty of vegetables, pizza can be part of a healthy diet.</p>
+    
+        <h2>Innovations in Pizza Making</h2>
+        <p>The art of pizza making has seen numerous innovations over the years. From wood-fired ovens and pizza stones to advanced dough-making techniques and unique toppings, pizza chefs constantly push the boundaries of creativity. Modern technology has also introduced automated pizza-making machines and delivery drones, making pizza more accessible than ever before.</p>
+        </div>
     </div>
-    <h2 class="center">"People who love to eat are always the best people." - Julia Child</h2>
-    <img class="center" src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg" alt="Spaghetti Carbonara" width="500" height="333">
-    <h3 class="center">Contact me</h3>
-    <form class="center" action="mailto:jelena-miodragovic@live.com" method="post" enctype="text/plain">
-        Name:<br>
-        <input type="text" name="name"><br>
-        Surname:<br>
-        <input type="text" name="surname"><br><br>
-        Email:<br>
-        <input type="text" name="email"><br><br>
-        <input type="submit" value="Submit">
-    </form> 
-    <H1 class="center">The Fascinating World of Pizza</H1>
-    <p class="center">Pizza, a beloved dish enjoyed by millions around the globe, has a rich history and cultural significance that extends far beyond its Italian origins. Its journey from a simple flatbread to a worldwide culinary phenomenon is filled with interesting facts and milestones.</p>
+    <script>
+        function sendEmail() {
+            var name = document.querySelector('.contact-form input[placeholder="Name"]').value;
+            var surname = document.querySelector('.contact-form input[placeholder="Surname"]').value;
+            var email = document.querySelector('.contact-form input[placeholder="Email"]').value;
+            var message = document.querySelector('.contact-form textarea').value;
+            window.location.href = `mailto:jelena-miodragovic@live.com?subject=Contact from ${name} ${surname}&body=${message}`;
+        }
+    </script>
     </br>
-    <strong><p class="center">Historical Origins</p></strong>
-    <p class="center">
-        The history of pizza dates back to ancient civilizations. The Greeks, Egyptians, and Romans all had their versions of flatbreads topped with various ingredients. However, the modern pizza we know today began in Naples, Italy, during the 18th century. The people of Naples, known as Neapolitans, created a dish called "pizza" that featured a flatbread topped with tomatoes, cheese, oil, and other ingredients.</p>
-    </br>
-    <strong><p class="center">Margherita Pizza</p></strong>
-    <p class="center">
-        One of the most famous types of pizza is the Margherita. Named after Queen Margherita of Savoy, it was created in 1889 by Neapolitan pizzaiolo Raffaele Esposito. The pizza's toppings—tomatoes, mozzarella cheese, and basil—were chosen to represent the colors of the Italian flag (red, white, and green). This iconic pizza remains a favorite among pizza lovers to this day.</p>
-    </br>
-    <strong><p class="center">Global Popularity</p></strong>
-    <p class="center">
-        Pizza's popularity spread rapidly beyond Italy. Italian immigrants introduced pizza to the United States in the late 19th and early 20th centuries. The first pizzeria in the U.S., Lombardi's, opened in New York City in 1905. Since then, pizza has become an integral part of American cuisine, with regional variations such as New York-style, Chicago deep-dish, and California-style pizzas.</p>
-    </br>
-    <strong><p class="center">Pizza by the Numbers</p></strong>
-    <p class="center">
-        The statistics surrounding pizza consumption are staggering. In the United States alone, around 3 billion pizzas are sold each year, with an average of 350 slices consumed per second. Pepperoni is the most popular pizza topping, chosen by 36% of pizza lovers. Globally, the pizza industry generates over $145 billion in revenue annually.</p>
-    </br>
-    <strong><p class="center">Health and Nutrition</p></strong>
-    <p class="center">
-        While pizza is often viewed as a comfort food, it can also be a nutritious meal when prepared with the right ingredients. A typical slice of Margherita pizza, for example, provides a balance of carbohydrates, protein, and fats. By choosing whole-grain crusts, lean proteins, and plenty of vegetables, pizza can be part of a healthy diet.</p>
-    </br>
-    <strong><p class="center">Innovations in Pizza Making</p></strong>
-    <p class="center">
-        The art of pizza making has seen numerous innovations over the years. From wood-fired ovens and pizza stones to advanced dough-making techniques and unique toppings, pizza chefs constantly push the boundaries of creativity. Modern technology has also introduced automated pizza-making machines and delivery drones, making pizza more accessible than ever before.</p>
-    </br>
-        <iframe height="600" src="https://web.powerva.microsoft.com/environments/9b1ef7bf-2d1a-e5be-8040-e1e21e808958/bots/cr374_kitchenDemoCopilot/webchat?__version__=2" frameborder="0" style="width: 100%; height: 400px;"></iframe>
+        <iframe height="600" src="https://web.powerva.microsoft.com/environments/9b1ef7bf-2d1a-e5be-8040-e1e21e808958/bots/cr374_kitchenDemoCopilot/webchat?__version__=2" frameborder="0" style="width: 80%; height: 400px;"></iframe>
 </body>
 </html>
 
