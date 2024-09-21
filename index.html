@@ -5,68 +5,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to my Kitchen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: beige;
-            font-family: sans-serif;
+            background-color: #f4efe9;
+            font-family: 'Quicksand', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
+            padding: 30px;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
-        .search-form {
-            margin: 20px 0;
-        }
-        .search-form input[type="text"] {
+        .search-container {
+            display: flex;
+            align-items: center;
+            background: #fff;
             padding: 10px;
-            width: 80%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 25px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-bottom: 20px;
         }
-        .search-form button {
-            padding: 10px;
+        .search-container input {
             border: none;
-            background-color: #ccc;
+            outline: none;
+            flex: 1;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 25px;
+        }
+        .search-container button {
+            background: none;
+            border: none;
             cursor: pointer;
+            font-size: 18px;
+            color: #555;
         }
         .quote {
-            font-size: 1.5em;
-            margin: 20px 0;
+            font-size: 1.4rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            color: #555;
         }
         .dish-image {
             width: 50%;
-            margin: 20px auto;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
         }
         .contact-form {
             display: flex;
             flex-direction: column;
             align-items: center;
+            width: 300px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
         }
         .contact-form input, .contact-form textarea {
-            width: 50%;
-            padding: 10px;
-            margin: 10px 0;
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 10px;
+            font-size: 16px;
+            border-radius: 8px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            outline: none;
+            transition: 0.3s ease;
+        }
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #007bff;
+            box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.2);
         }
         .contact-form button {
-            padding: 10px 20px;
-            background-color: blue;
+            padding: 12px;
+            background-color: #007bff;
             color: white;
             border: none;
+            font-size: 16px;
+            font-weight: bold;
             cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s ease;
         }
-        h1 {
-            color: #d9534f;
-        }
-        h2 {
-            color: #5bc0de;
-            border-bottom: 2px solid #5bc0de;
-            padding-bottom: 5px;
-        }
-        p {
-            margin-bottom: 20px;
+        .contact-form button:hover {
+            background-color: #0056b3;
         }
         h1 {
             color: #d9534f;
@@ -82,58 +110,55 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to my Kitchen</h1>
-        <div class="search-form">
-            <input type="text" placeholder="Find a Recipe">
-            <button><i class="fa fa-search"></i></button>
-        </div>
-        <div class="quote">
-            “People who love to eat are always the best people.” - Julia Child
-        </div>
-        <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg" alt="Dish Image" class="dish-image">
-        <div class="contact-form">
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="Surname">
-            <input type="email" placeholder="Email">
-            <textarea placeholder="Message"></textarea>
-            <button onclick="sendEmail()">Submit</button>
-        </div>
-        <div>
-            <h1>The Fascinating World of Pizza</h1>
-        <p>Pizza, a beloved dish enjoyed by millions around the globe, has a rich history and cultural significance that extends far beyond its Italian origins. Its journey from a simple flatbread to a worldwide culinary phenomenon is filled with interesting facts and milestones.</p>
-    
-        <h2>Historical Origins</h2>
-        <p>The history of pizza dates back to ancient civilizations. The Greeks, Egyptians, and Romans all had their versions of flatbreads topped with various ingredients. However, the modern pizza we know today began in Naples, Italy, during the 18th century. The people of Naples, known as Neapolitans, created a dish called "pizza" that featured a flatbread topped with tomatoes, cheese, oil, and other ingredients.</p>
-    
-        <h2>Margherita Pizza</h2>
-        <p>One of the most famous types of pizza is the Margherita. Named after Queen Margherita of Savoy, it was created in 1889 by Neapolitan pizzaiolo Raffaele Esposito. The pizza's toppings—tomatoes, mozzarella cheese, and basil—were chosen to represent the colors of the Italian flag (red, white, and green). This iconic pizza remains a favorite among pizza lovers to this day.</p>
-    
-        <h2>Global Popularity</h2>
-        <p>Pizza's popularity spread rapidly beyond Italy. Italian immigrants introduced pizza to the United States in the late 19th and early 20th centuries. The first pizzeria in the U.S., Lombardi's, opened in New York City in 1905. Since then, pizza has become an integral part of American cuisine, with regional variations such as New York-style, Chicago deep-dish, and California-style pizzas.</p>
-    
-        <h2>Pizza by the Numbers</h2>
-        <p>The statistics surrounding pizza consumption are staggering. In the United States alone, around 3 billion pizzas are sold each year, with an average of 350 slices consumed per second. Pepperoni is the most popular pizza topping, chosen by 36% of pizza lovers. Globally, the pizza industry generates over $145 billion in revenue annually.</p>
-    
-        <h2>Health and Nutrition</h2>
-        <p>While pizza is often viewed as a comfort food, it can also be a nutritious meal when prepared with the right ingredients. A typical slice of Margherita pizza, for example, provides a balance of carbohydrates, protein, and fats. By choosing whole-grain crusts, lean proteins, and plenty of vegetables, pizza can be part of a healthy diet.</p>
-    
-        <h2>Innovations in Pizza Making</h2>
-        <p>The art of pizza making has seen numerous innovations over the years. From wood-fired ovens and pizza stones to advanced dough-making techniques and unique toppings, pizza chefs constantly push the boundaries of creativity. Modern technology has also introduced automated pizza-making machines and delivery drones, making pizza more accessible than ever before.</p>
-        </div>
+    <h1>Welcome to my Kitchen</h1>
+    <div class="search-container">
+        <input type="text" placeholder="Find a Recipe">
+        <button><i class="fa fa-search"></i></button>
     </div>
+    <div class="quote">
+        “People who love to eat are always the best people.” - Julia Child
+    </div>
+    <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg" alt="Dish Image" class="dish-image">
+    <div class="contact-form">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Surname">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button onclick="sendEmail()">Submit</button>
+    </div>
+    <div>
+        <h1>The Fascinating World of Pizza</h1>
+    <p>Pizza, a beloved dish enjoyed by millions around the globe, has a rich history and cultural significance that extends far beyond its Italian origins. Its journey from a simple flatbread to a worldwide culinary phenomenon is filled with interesting facts and milestones.</p>
+
+    <h2>Historical Origins</h2>
+    <p>The history of pizza dates back to ancient civilizations. The Greeks, Egyptians, and Romans all had their versions of flatbreads topped with various ingredients. However, the modern pizza we know today began in Naples, Italy, during the 18th century. The people of Naples, known as Neapolitans, created a dish called "pizza" that featured a flatbread topped with tomatoes, cheese, oil, and other ingredients.</p>
+
+    <h2>Margherita Pizza</h2>
+    <p>One of the most famous types of pizza is the Margherita. Named after Queen Margherita of Savoy, it was created in 1889 by Neapolitan pizzaiolo Raffaele Esposito. The pizza's toppings—tomatoes, mozzarella cheese, and basil—were chosen to represent the colors of the Italian flag (red, white, and green). This iconic pizza remains a favorite among pizza lovers to this day.</p>
+
+    <h2>Global Popularity</h2>
+    <p>Pizza's popularity spread rapidly beyond Italy. Italian immigrants introduced pizza to the United States in the late 19th and early 20th centuries. The first pizzeria in the U.S., Lombardi's, opened in New York City in 1905. Since then, pizza has become an integral part of American cuisine, with regional variations such as New York-style, Chicago deep-dish, and California-style pizzas.</p>
+
+    <h2>Pizza by the Numbers</h2>
+    <p>The statistics surrounding pizza consumption are staggering. In the United States alone, around 3 billion pizzas are sold each year, with an average of 350 slices consumed per second. Pepperoni is the most popular pizza topping, chosen by 36% of pizza lovers. Globally, the pizza industry generates over $145 billion in revenue annually.</p>
+
+    <h2>Health and Nutrition</h2>
+    <p>While pizza is often viewed as a comfort food, it can also be a nutritious meal when prepared with the right ingredients. A typical slice of Margherita pizza, for example, provides a balance of carbohydrates, protein, and fats. By choosing whole-grain crusts, lean proteins, and plenty of vegetables, pizza can be part of a healthy diet.</p>
+
+    <h2>Innovations in Pizza Making</h2>
+    <p>The art of pizza making has seen numerous innovations over the years. From wood-fired ovens and pizza stones to advanced dough-making techniques and unique toppings, pizza chefs constantly push the boundaries of creativity. Modern technology has also introduced automated pizza-making machines and delivery drones, making pizza more accessible than ever before.</p>
+
+    </div>
+    <iframe src="https://web.powerva.microsoft.com/environments/Default-8e90dc20-ce9b-4b0d-aa00-cf16e45c33d1/bots/cr374_agent_guLZ3Y/webchat?__version__=2" frameborder="0" style="width: 80%; height: 500px;"></iframe>
+
     <script>
         function sendEmail() {
             var name = document.querySelector('.contact-form input[placeholder="Name"]').value;
             var surname = document.querySelector('.contact-form input[placeholder="Surname"]').value;
             var email = document.querySelector('.contact-form input[placeholder="Email"]').value;
-            var message = document.querySelector('.contact-form textarea').value;
-            window.location.href = `mailto:jelena-miodragovic@live.com?subject=Contact from ${name} ${surname}&body=${message}`;
+            var message = document.querySelector('.contact-form textarea[placeholder="Message"]').value;
+            window.location.href = `mailto:jelena-miodragovic@live.com?subject=Contact Form Submission&body=Name: ${name}%0D%0ASurname: ${surname}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
         }
     </script>
-    </br>
-        <iframe height="600" src="https://web.powerva.microsoft.com/environments/9b1ef7bf-2d1a-e5be-8040-e1e21e808958/bots/cr374_kitchenDemoCopilot/webchat?__version__=2" frameborder="0" style="width: 80%; height: 400px;"></iframe>
 </body>
 </html>
-
-
